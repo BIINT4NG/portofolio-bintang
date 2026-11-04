@@ -19,4 +19,4 @@ jadwal belajar
 
 ## Tautan
 - Website: menyusul setelah *deploy* ke Vercel
-- Dibuat oleh: Rahmat Bintang T.K, SMKN 1 Pasuruan
+- Dibuat oleh: Rahmat Bintang T.K, SMKN 1 Pasuruan# kasir-kantin-smk
