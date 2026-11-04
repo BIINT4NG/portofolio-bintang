@@ -17,4 +17,4 @@ jadwal belajar
 - Git dan GitHub
 ## Tautan
 - Website: menyusul setelah *deploy* ke Vercel
-- Dibuat oleh: Andi Pratama, SMK Mitra
+- Dibuat oleh: Rahmat Bintang T.K, SMKN 1 Pasuruan
