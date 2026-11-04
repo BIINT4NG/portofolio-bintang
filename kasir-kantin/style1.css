@@ -73,6 +73,7 @@ h3 {
 
 h3 {
   margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 p,
@@ -191,6 +192,14 @@ nav a:hover {
 main {
   flex: 1;
   padding: 1.5rem 0;
+}
+
+main > .container {
+  font-weight: 500;
+}
+
+main > .container h2 {
+  font-weight: 600;
 }
 
 main > .container > section:not(.hero) {
