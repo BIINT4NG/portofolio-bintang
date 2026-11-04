@@ -11,10 +11,12 @@ jadwal belajar
 - Halaman **Proyek** berisi daftar proyek dalam bentuk kartu
 - Halaman **Kontak** berisi form untuk menghubungi saya
 - Tampilan responsif dengan Flexbox dan *media query*
+
 ## Teknologi
 - HTML5
 - CSS3 (Flexbox dan media query)
 - Git dan GitHub
+
 ## Tautan
 - Website: menyusul setelah *deploy* ke Vercel
 - Dibuat oleh: Rahmat Bintang T.K, SMKN 1 Pasuruan
