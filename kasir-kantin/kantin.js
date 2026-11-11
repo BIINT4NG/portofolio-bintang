@@ -185,4 +185,4 @@ const pesanan3 = {
     esCokelat: 1
 };
 
-cetakStruk("Pembeli 3", pesanan3, 30000);
+cetakStruk("Pembeli 3", pesanan3, 30000);  

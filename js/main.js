@@ -19,7 +19,7 @@ if (daftarSkill && jumlahSkill) {
   jumlahSkill.textContent = `Ada ${skills.length} keahlian yang sedang saya kembangkan.`;
 }
 
-const hobi = ["Membaca buku", "Berenang", "Bermain Game", "Bersepeda"];
+const hobi = ["Membaca buku", "Berenang", "Bermain Game2", "Bersepeda"];
 for (const item of hobi) {
   console.log(`Hobi saya: ${item}`);
 }

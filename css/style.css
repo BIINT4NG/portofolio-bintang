@@ -136,6 +136,16 @@ nav a:hover {
   display: none;
 }
 
+.menu-laptop a {
+  color: #e9d5ff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-laptop a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
 .menu-ponsel summary {
   padding: 0.5rem 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.75);
@@ -170,6 +180,10 @@ nav a:hover {
   flex-direction: column;
   gap: 0.25rem;
   margin: 0;
+}
+
+.menu-ponsel nav a {
+  color: #5b21b6;
 }
 
 /* 4. Isi utama, hero, dan kartu */
