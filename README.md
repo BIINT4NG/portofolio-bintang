@@ -1,15 +1,16 @@
 # Portofolio Rahmat Bintang Tegar K
-Website portofolio pribadi yang saya buat di Kelas Industri UBIG 
- (Paket 1, Minggu 01 sampai 05).
+Website portofolio pribadi yang saya buat di Kelas Industri UBIG
+(Paket 1, Minggu 01 sampai 07).
 Website ini tampil rapi di ponsel, tablet, dan laptop.
 
 ## Tampilan
 ![Tampilan beranda portofolio](png/tampilan.png)
 
 ## Fitur
-- Halaman *Beranda* berisi profil, hobi, cita-cita, keahlian, dan jadwal belajar
-- Halaman *Proyek* berisi daftar proyek dalam bentuk kartu
-- Halaman *Kontak* berisi form untuk menghubungi saya
+- Halaman *Beranda* berisi profil, hobi, cita-cita, jadwal belajar, dan keahlian dari data JavaScript
+- Halaman *Proyek* menampilkan enam proyek dinamis dengan filter HTML, CSS, dan JavaScript
+- Halaman *Kontak* berisi form dengan penghitung karakter pesan (maksimal 300)
+- Mode gelap tersedia di halaman Beranda, Proyek, dan Kontak
 - Tampilan responsif dengan Flexbox dan media query
 
 ## Teknologi
@@ -20,4 +21,4 @@ Website ini tampil rapi di ponsel, tablet, dan laptop.
 
 ## Tautan
 - Website: 
-- Dibuat oleh Rakha, SMKN 1 Pasuruan
+- Dibuat oleh Rahmat Bintang T.K, SMKN 1 Pasuruan

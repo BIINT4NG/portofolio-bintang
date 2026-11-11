@@ -49,7 +49,7 @@ function tahunKabisat(tahun) {
 }
 
 console.log("Soal 4: tahun kabisat");
-console.log('Tahun 2024 adalah tahun Kabisat = ${tahunKabisat(2024)}');
+console.log(`Tahun 2024 adalah tahun Kabisat = ${tahunKabisat(2024)}`);
 console.log(`Tahun 2026 adalah tahun Kabisat = ${tahunKabisat(2026)}`);
 console.log(`Tahun 1900 adalah tahun Kabisat = ${tahunKabisat(1900)}`);
 console.log(`Tahun 2000 adalah tahun Kabisat = ${tahunKabisat(2000)}`);

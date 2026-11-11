@@ -17,9 +17,7 @@ const hargaJeruk = 5000;
 const hargaCokelat = 6000;
 const hargaAir = 3000;
 
-
 // Daftar harga seluruh menu
-
 const daftarHarga = {
     nasiGoreng: hargaNasi,
     ayamGeprek: hargaAyam,
@@ -32,9 +30,7 @@ const daftarHarga = {
     airMineral: hargaAir
 };
 
-
 // Nama dan emoji menu
-
 const namaMenu = {
     nasiGoreng: "🍛 Nasi Goreng",
     ayamGeprek: "🍗 Ayam Geprek",
@@ -49,7 +45,6 @@ const namaMenu = {
 
 
 // 2. MENAMPILKAN DAFTAR MENU
-
 console.log(`
 🍛 DAFTAR MAKANAN
 1. Nasi Goreng : Rp12.000
@@ -67,15 +62,12 @@ console.log(`
 
 // 3. FUNGSI HITUNG TOTAL
 // Sesuai soal modul
-
 function hitungTotal(jumlahNasi, jumlahEs) {
     return (jumlahNasi * hargaNasi) +
            (jumlahEs * hargaEs);
 }
 
-
 // Fungsi tambahan untuk menghitung semua menu
-
 function hitungTotalMenu(pesanan) {
 
     let total = hitungTotal(
@@ -97,15 +89,12 @@ function hitungTotalMenu(pesanan) {
 
 // 4. ARROW FUNCTION HITUNG KEMBALIAN
 // Sesuai soal modul
-
 const hitungKembalian = (bayar, total) => {
     return bayar - total;
 };
 
-
 // 5. FUNGSI CEK PEMBAYARAN
 // Menggunakan if, else if, dan else
-
 function cekPembayaran(bayar, total) {
 
     if (bayar < total) {
@@ -130,7 +119,6 @@ function cekPembayaran(bayar, total) {
 
 
 // 6. FUNGSI CETAK STRUK
-
 function cetakStruk(nama, pesanan, bayar) {
 
     const total = hitungTotalMenu(pesanan);
@@ -182,9 +170,7 @@ const pesanan1 = {
 
 cetakStruk("Pembeli 1", pesanan1, 15000);
 
-
 // PEMBELI 2: UANG PAS
-
 const pesanan2 = {
     bakso: 1,
     esTeh: 1
@@ -194,7 +180,6 @@ cetakStruk("Pembeli 2", pesanan2, 14000);
 
 
 // PEMBELI 3: UANG BERLEBIH
-
 const pesanan3 = {
     nasiGoreng: 1,
     esCokelat: 1
