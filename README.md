@@ -11,7 +11,7 @@ Website ini tampil rapi di ponsel, tablet, dan laptop.
 - Halaman *Proyek* memuat data dari `data/proyek.json`, dilengkapi filter kategori dan pencarian
 - Halaman *Proyek* menampilkan repositori GitHub terbaru dengan loading dan penanganan error
 - Halaman *Kontak* berisi form dengan penghitung karakter pesan (maksimal 300)
-- Mode gelap tersedia di halaman Beranda, Proyek, Kontak, dan Kalkulator
+- Mode gelap tersedia di Beranda, Proyek, Kontak, Kalkulator, dan Kasir Kantin
 - Tampilan responsif dengan Flexbox dan media query
 
 ## Teknologi

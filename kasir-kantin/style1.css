@@ -187,6 +187,18 @@ nav a:hover {
   color: #ffffff;
 }
 
+.tombol-tema {
+  padding: 0.5rem 0.9rem;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* 4. Isi utama, hero, dan kartu */
 main {
   flex: 1;
@@ -516,4 +528,59 @@ footer a {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+body.gelap {
+  background-color: #182433;
+  color: #e3e8ee;
+}
+
+body.gelap header {
+  background: #182433;
+  border-bottom-color: #344356;
+}
+
+body.gelap h1,
+body.gelap h3,
+body.gelap .kartu,
+body.gelap .kartu details summary {
+  color: #e3e8ee;
+}
+
+body.gelap h2 {
+  background: linear-gradient(90deg, #5eead4, #fda4af 55%, #facc15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+body.gelap .hero,
+body.gelap .kartu {
+  background-color: #1b2838;
+  border-color: #344356;
+}
+
+body.gelap footer {
+  background: #182433;
+  border-color: #344356;
+  color: #cbd5e1;
+}
+
+body.gelap .hero p,
+body.gelap .kartu details p {
+  color: #cbd5e1;
+}
+
+body.gelap a {
+  color: #dfcafa;
+}
+
+body.gelap .menu-ponsel nav {
+  background: #1b2838;
+  border-color: #46566a;
+}
+
+body.gelap .menu-ponsel nav a {
+  color: #e3e8ee;
 }

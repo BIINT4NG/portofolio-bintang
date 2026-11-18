@@ -241,7 +241,7 @@ async function ambilRepo() {
 
     statusRepo.textContent = `${repos.length} repositori yang terakhir diperbarui:`;
   } catch (error) {
-    statusRepo.textContent = "Maaf, daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
+    statusRepo.textContent = "maaf,daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
     console.error(error);
   }
 }
