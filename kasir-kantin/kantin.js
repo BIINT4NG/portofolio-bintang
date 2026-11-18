@@ -185,4 +185,95 @@ const pesanan3 = {
     esCokelat: 1
 };
 
-cetakStruk("Pembeli 3", pesanan3, 30000);  
+cetakStruk("Pembeli 3", pesanan3, 30000);
+
+// Tampilan Menu Dengan Cara JSON
+let menu = [];
+
+const daftarMenu = document.querySelector("#daftar-menu");
+const jumlahMenu = document.querySelector("#jumlah-menu");
+
+async function muatMenu() {
+    if (jumlahMenu) {
+        jumlahMenu.textContent = "Memuat menu...";
+    }
+
+    try {
+        const response = await fetch("../data/menu.json");
+
+        if (!response.ok) {
+            throw new Error("Data menu gagal dimuat");
+        }
+
+        menu = await response.json();
+
+        tampilkanMenu(menu);
+
+    } catch (error) {
+        console.error("Error:", error);
+
+        if (jumlahMenu) {
+            jumlahMenu.textContent = "Data Menu gagal dimuat.";
+        }
+    }
+}
+
+function buatKartu(item) {
+  return `
+<article class="kartu">
+<span class="label">${item.kategori}</span>
+<h3>${item.nama}</h3>
+<h3>${item.harga}</h3>
+<p>${item.deskripsi}</p>
+</article>`;
+}
+
+function tampilkanMenu(daftar) {
+  if (!daftarMenu) return;
+  const semuaKartu = daftar.map((item) => buatKartu(item));
+  daftarMenu.innerHTML = semuaKartu.join("");
+  if (jumlahMenu) {
+    jumlahMenu.textContent = `Menampilkan ${daftar.length} dari total ${menu.length} menu`;
+  }
+}
+
+function pasangFilter(idTombol, kategori) {
+  const tombol = document.querySelector(idTombol);
+  if (!tombol) return;
+
+  tombol.addEventListener("click", () => {
+    document.querySelectorAll(".tombol-filter").forEach((item) => {
+      item.classList.remove("aktif");
+    });
+    tombol.classList.add("aktif");
+
+    if (kategori === "Semua") {
+      tampilkanMenu(menu);
+    } else {
+      tampilkanMenu(menu.filter((item) => item.kategori === kategori));
+    }
+  });
+}
+
+
+if (daftarMenu) {
+  muatMenu();
+  pasangFilter("#filter-semua", "Semua");
+  pasangFilter("#filter-makanan", "Makanan");
+  pasangFilter("#filter-minuman", "Minuman");
+}
+
+// Tema gelap terang
+const tombolTema = document.querySelector("#tombol-tema");
+
+if (tombolTema) {
+  tombolTema.addEventListener("click", () => {
+    document.body.classList.toggle("gelap");
+
+    if (document.body.classList.contains("gelap")) {
+      tombolTema.textContent = "Mode Terang☀️";
+    } else {
+      tombolTema.textContent = "Mode Gelap🌙";
+    }
+  });
+}

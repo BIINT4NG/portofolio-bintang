@@ -1,0 +1,67 @@
+[
+  {
+    "nama": "🍚Nasi Goreng",
+    "harga": "Rp12.000",
+    "kategori": "Makanan",
+    "deskripsi": "Nasi yang ditumis dan diberi bumbu sebagai penyedap rasa nya"
+  },
+  {
+    "nama": "Ayam Geprek",
+    "harga": "Rp15.000",
+    "kategori": "Makanan",
+    "deskripsi": "Ayam yang digeprek dengan sambal pedas"
+  },
+  {"nama": "🍜Mie Goreng",
+    "harga": "Rp6.000",
+    "kategori": "Makanan",
+    "deskripsi": "Mie yang dimasak dengan bumbu terbaik"
+  },
+  {
+    "nama": "🍖Sate Ayam",
+    "harga": "Rp12.000",
+    "kategori": "Makanan",
+    "deskripsi": "Daging ayam yang ditusuk dan dibakar dengan bumbu kacang"
+  },
+  {
+    "nama": "🥩Sate Sapi",
+    "harga": "Rp15.000",
+    "kategori": "Makanan",
+    "deskripsi": "Daging sapi yang ditusuk dan dibakar dengan bumbu kacang"
+  },
+  {
+    "nama": "🥤Es Teh",
+    "harga": "Rp4.000",
+    "kategori": "Minuman",
+    "deskripsi": "Teh yang diolah dengan baik menghasilkan rasa segar dengan tambahan es batu"
+  },
+  {
+    "nama": "🥤Es Jeruk",
+    "harga": "Rp5.000",
+    "kategori": "Minuman",
+    "deskripsi": "Jeruk yang diolah agar menjadi minuman segar dengan sedikit asam yang segar dan diberi es batu"
+  },
+  {
+    "nama": "🍶Es Coklat",
+    "harga": "Rp6.000",
+    "kategori": "Minuman",
+    "deskripsi": "Olahan coklat yang diseduh lalu diberi es batu"
+  },
+  {
+    "nama": "🥤Air Mineral",
+    "harga": "Rp3.000",
+    "kategori": "Minuman",
+    "deskripsi": "Air putih mineral yang menyegarkan"
+  },
+  {
+    "nama": "🥃Es Kopi Susu",
+    "harga": "Rp5.000",
+    "kategori": "Minuman",
+    "deskripsi": "Es kopi susu dengan rasa yang pas diminum"
+  },
+  {
+    "nama": "☕Kopi",
+    "harga": "Rp5.000",
+    "kategori": "Minuman",
+    "deskripsi": "Kopi yang cocok diminum saat sedang beristirahat"
+  }
+]

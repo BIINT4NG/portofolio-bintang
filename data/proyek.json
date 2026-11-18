@@ -1,0 +1,44 @@
+[
+  {
+    "judul": "Halaman Profil Pertama",
+    "kategori": "HTML",
+    "gambar": "png/tampilan.png",
+    "alt": "Tangkapan layar halaman profil Rahmat Bintang",
+    "deskripsi": "Halaman web pertama saya, berisi profil, hobi, dan cita-cita."
+  },
+  {
+    "judul": "Form Kontak",
+    "kategori": "HTML",
+    "gambar": "img/proyek-kontak.png",
+    "alt": "Tangkapan layar form kontak",
+    "deskripsi": "Form kontak dengan label dan validasi isian wajib."
+  },
+  {
+    "judul": "Tabel Jadwal Belajar",
+    "kategori": "HTML",
+    "gambar": "img/proyek-jadwal.png",
+    "alt": "Tangkapan layar tabel jadwal belajar mandiri",
+    "deskripsi": "Jadwal belajar mingguan yang disusun dengan thead dan tbody."
+  },
+  {
+    "judul": "Portofolio Responsif",
+    "kategori": "CSS",
+    "gambar": "img/css.png",
+    "alt": "Tangkapan layar portofolio responsif",
+    "deskripsi": "Tampilan portofolio yang menyesuaikan ponsel, tablet, dan laptop."
+  },
+  {
+    "judul": "Kalkulator Nilai Rapor",
+    "kategori": "JavaScript",
+    "gambar": "img/kalkulator-nilai.png",
+    "alt": "Tangkapan layar hasil latihan kalkulator nilai",
+    "deskripsi": "Menghitung rata-rata nilai dan menentukan predikat dengan JavaScript."
+  },
+  {
+    "judul": "Lima Soal Logika",
+    "kategori": "JavaScript",
+    "gambar": "img/soal-logika.png",
+    "alt": "Tangkapan layar hasil pengujian lima soal logika",
+    "deskripsi": "Lima fungsi logika yang masing-masing diuji dengan tiga masukan."
+  }
+]

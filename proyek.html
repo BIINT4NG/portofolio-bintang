@@ -20,6 +20,7 @@
           <li><a href="index.html">Beranda</a></li>
           <li><a href="proyek.html">Proyek</a></li>
           <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="kalkulator.html">Kalkulator</a></li>
           <li><a href="kasir-kantin/KasirKantinSMKN1Pasuruan.html">Kasir Kantin</a></li>
 
         </ul>
@@ -33,6 +34,7 @@
             <li><a href="index.html">Beranda</a></li>
             <li><a href="proyek.html">Proyek</a></li>
             <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kalkulator.html">Kalkulator</a></li>
             <li><a href="kasir-kantin/KasirKantinSMKN1Pasuruan.html">Kasir Kantin</a></li>
 
           </ul>
@@ -53,9 +55,46 @@
           <button type="button" class="tombol-filter" id="filter-css" aria-pressed="false">CSS</button>
           <button type="button" class="tombol-filter" id="filter-javascript" aria-pressed="false">JavaScript</button>
         </div>
-        <p id="jumlah-proyek" aria-live="polite"></p>
+        <label for="cari-proyek">Cari proyek</label>
+        <input type="search" id="cari-proyek" placeholder="Masukkan judul atau kategori">
+        <p id="jumlah-proyek" aria-live="polite">Menampilkan 6 dari 6 proyek</p>
         <div class="daftar-kartu galeri-proyek" id="daftar-proyek">
-          <noscript>Aktifkan JavaScript untuk melihat daftar proyek.</noscript>
+          <article class="kartu">
+            <span class="label">HTML</span>
+            <h3>Halaman Profil Pertama</h3>
+            <img src="png/tampilan.png" alt="Tangkapan layar halaman profil Rahmat Bintang" width="280">
+            <p>Halaman web pertama saya, berisi profil, hobi, dan cita-cita.</p>
+          </article>
+          <article class="kartu">
+            <span class="label">HTML</span>
+            <h3>Form Kontak</h3>
+            <img src="img/proyek-kontak.png" alt="Tangkapan layar form kontak" width="280">
+            <p>Form kontak dengan label dan validasi isian wajib.</p>
+          </article>
+          <article class="kartu">
+            <span class="label">HTML</span>
+            <h3>Tabel Jadwal Belajar</h3>
+            <img src="img/proyek-jadwal.png" alt="Tangkapan layar tabel jadwal belajar mandiri" width="280">
+            <p>Jadwal belajar mingguan yang disusun dengan thead dan tbody.</p>
+          </article>
+          <article class="kartu">
+            <span class="label">CSS</span>
+            <h3>Portofolio Responsif</h3>
+            <img src="img/css.png" alt="Tangkapan layar portofolio responsif" width="280">
+            <p>Tampilan portofolio yang menyesuaikan ponsel, tablet, dan laptop.</p>
+          </article>
+          <article class="kartu">
+            <span class="label">JavaScript</span>
+            <h3>Kalkulator Nilai Rapor</h3>
+            <img src="img/kalkulator-nilai.png" alt="Tangkapan layar hasil latihan kalkulator nilai" width="280">
+            <p>Menghitung rata-rata nilai dan menentukan predikat dengan JavaScript.</p>
+          </article>
+          <article class="kartu">
+            <span class="label">JavaScript</span>
+            <h3>Lima Soal Logika</h3>
+            <img src="img/soal-logika.png" alt="Tangkapan layar hasil pengujian lima soal logika" width="280">
+            <p>Lima fungsi logika yang masing-masing diuji dengan tiga masukan.</p>
+          </article>
         </div>
       </section>
 
@@ -71,6 +110,13 @@
           <p>Belum, saya masih belajar. Namun kamu tetap boleh menghubungi saya melalui halaman Kontak.</p>
         </details>
       </section>
+      <section class="kartu">
+          <h2>Repositori GitHub Saya</h2>
+          <p>Daftar ini diambil langsung dari GitHub setiap kali halaman
+             dibuka.</p>
+          <p id="status-repo"></p>
+          <ul id="daftar-repo"></ul>
+        </section>
     </div>
   </main>
 

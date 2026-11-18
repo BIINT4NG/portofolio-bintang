@@ -26,18 +26,27 @@ const tombolHitung = document.querySelector("#hitung");
 const elemenHasil = document.querySelector("#hasil");
 
 // Event listener saat tombol "Hitung" diklik
-tombolHitung.addEventListener("click", () => {
-  const nilaiTugas = Number(inputTugas.value);
-  const nilaiUts = Number(inputUts.value);
-  const nilaiUas = Number(inputUas.value);
+if (inputTugas && inputUts && inputUas && tombolHitung && elemenHasil) {
+  tombolHitung.addEventListener("click", () => {
+    const nilaiTugas = Number(inputTugas.value);
+    const nilaiUts = Number(inputUts.value);
+    const nilaiUas = Number(inputUas.value);
 
-  // Menghitung rata-rata dan predikat
-  const rataRata = hitungRataRata(nilaiTugas, nilaiUts, nilaiUas);
-  const hasilPredikat = predikat(rataRata);
+    if (inputTugas.value === "" || inputUts.value === "" || inputUas.value === "") {
+      elemenHasil.textContent = "Lengkapi semua nilai terlebih dahulu.";
+      return;
+    }
 
-  // Menampilkan hasil pada paragraf
-  elemenHasil.textContent = `Rata-rata ${rataRata.toFixed(1)}, predikat ${hasilPredikat}`;
-});
+    if ([nilaiTugas, nilaiUts, nilaiUas].some((nilai) => nilai < 0 || nilai > 100)) {
+      elemenHasil.textContent = "Nilai harus berada pada rentang 0 sampai 100.";
+      return;
+    }
+
+    const rataRata = hitungRataRata(nilaiTugas, nilaiUts, nilaiUas);
+    const hasilPredikat = predikat(rataRata);
+    elemenHasil.textContent = `Rata-rata ${rataRata.toFixed(1)}, predikat ${hasilPredikat}`;
+  });
+}
 
 // Pengujian fungsi di console (minimal 3 masukan sesuai kriteria)
 console.log("Pengujian hitungRataRata:");

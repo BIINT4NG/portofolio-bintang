@@ -22,6 +22,8 @@ img {
 
 /* 2. Dasar halaman: warna dan huruf */
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Inter", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -188,6 +190,7 @@ nav a:hover {
 
 /* 4. Isi utama, hero, dan kartu */
 main {
+  flex: 1;
   padding: 1.5rem 0;
 }
 
@@ -376,6 +379,30 @@ textarea:focus {
   border-color: transparent;
 }
 
+.kalkulator {
+  margin-bottom: 1.5rem;
+}
+
+.kalkulator .form-group {
+  margin-bottom: 1rem;
+}
+
+.kalkulator label,
+.kalkulator input {
+  display: block;
+}
+
+.kalkulator input {
+  width: 100%;
+  max-width: 100%;
+}
+
+#hasil {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
 button {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -492,6 +519,11 @@ footer a {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+}
+
+#cari-proyek {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .tombol-filter {
