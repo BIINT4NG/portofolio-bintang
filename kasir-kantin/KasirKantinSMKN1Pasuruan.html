@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kasir Kantin SMKN 1 Pasuruan</title>
+  <title>Rahmat Bintang T.K | Kasir Kantin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
   <script src="kantin.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container navbar">
-      <h1>Kasir kantin SMKN 1 Pasuruan</h1>
+      <h1>Rahmat Bintang T.K</h1>
       <nav class="menu-laptop">
         <ul>
           <li><a href="../index.html">Beranda</a></li>
           <li><a href="../proyek.html">Proyek</a></li>
           <li><a href="../kontak.html">Kontak</a></li>
+          <li><a href="../kalkulator.html">Kalkulator</a></li>
           <li><a href="KasirKantinSMKN1Pasuruan.html" aria-current="page">Kasir Kantin</a></li>
         </ul>
       </nav>
       <button type="button" id="tombol-tema" class="tombol-tema">Mode Gelap</button>
-      <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
       <details class="menu-ponsel">
         <summary aria-label="Buka menu navigasi">Menu</summary>
         <nav>
@@ -31,6 +32,7 @@
             <li><a href="../index.html">Beranda</a></li>
             <li><a href="../proyek.html">Proyek</a></li>
             <li><a href="../kontak.html">Kontak</a></li>
+            <li><a href="../kalkulator.html">Kalkulator</a></li>
             <li><a href="KasirKantinSMKN1Pasuruan.html" aria-current="page">Kasir Kantin</a></li>
           </ul>
         </nav>
@@ -40,12 +42,12 @@
 
   <main>
     <div class="container">
-      <section class="hero">
-        <div class="hero-icon" aria-hidden="true">🍽️</div>
-        <div>
-          <h2>Kasir Kantin</h2>
-          <p>Selamat datang di Kasir Kantin SMKN 1 Pasuruan. Silakan pilih makanan dan minuman.</p>
-        </div>
+      <section>
+        <h2>Kasir Kantin</h2>
+        <p>Selamat datang di Kasir Kantin SMKN 1 Pasuruan. Silakan pilih makanan dan minuman.</p>
+        <label for="cari-menu">Cari menu</label>
+        <input type="search" id="cari-menu" placeholder="Masukkan nama menu atau kategori">
+        <p id="jumlah-menu" aria-live="polite">Menampilkan 24 dari 24 menu</p>
       </section>
 
       <section>
@@ -80,6 +82,36 @@
             <p aria-hidden="true">🥩</p>
             <h3>Sate Sapi</h3>
             <p><strong>Rp15.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🍚</p>
+            <h3>Nasi Uduk</h3>
+            <p><strong>Rp8.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🍲</p>
+            <h3>Soto Ayam</h3>
+            <p><strong>Rp12.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🍱</p>
+            <h3>Nasi Ayam</h3>
+            <p><strong>Rp13.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🥟</p>
+            <h3>Tempe Mendoan</h3>
+            <p><strong>Rp5.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🐟</p>
+            <h3>Pempek</h3>
+            <p><strong>Rp10.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🥟</p>
+            <h3>Siomay</h3>
+            <p><strong>Rp8.000</strong></p>
           </article>
         </div>
       </section>
@@ -117,6 +149,36 @@
             <h3>Kopi</h3>
             <p><strong>Rp5.000</strong></p>
           </article>
+          <article class="kartu">
+            <p aria-hidden="true">🥑</p>
+            <h3>Jus Alpukat</h3>
+            <p><strong>Rp8.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🥛</p>
+            <h3>Susu Cokelat</h3>
+            <p><strong>Rp5.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🍋</p>
+            <h3>Es Lemon Tea</h3>
+            <p><strong>Rp5.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🍵</p>
+            <h3>Teh Hangat</h3>
+            <p><strong>Rp3.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🥥</p>
+            <h3>Es Kelapa</h3>
+            <p><strong>Rp7.000</strong></p>
+          </article>
+          <article class="kartu">
+            <p aria-hidden="true">🫚</p>
+            <h3>Wedang Jahe</h3>
+            <p><strong>Rp4.000</strong></p>
+          </article>
         </div>
       </section>
 
@@ -131,7 +193,7 @@
     <p>Kontak: <a href="mailto:binzril110410@gmail.com">binzril110410@gmail.com</a> |
       <a href="https://github.com/BIINT4NG/portofolio-bintang" target="_blank" rel="noreferrer">GitHub</a> |
       <a href="https://www.youtube.com/@Rhmat%C3%9Fintang" target="_blank" rel="noreferrer">YouTube</a></p>
-    <p>&copy; 2026 Rahmat Bintang T.K. Dibuat di Kelas Industri UBIG.</p>
+    <p>&copy; 2026 Rahmat Bintang T.K Dibuat di Kelas Industri UBIG.</p>
   </footer>
 </body>
 </html>

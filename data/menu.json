@@ -1,67 +1,146 @@
 [
   {
-    "nama": "🍚Nasi Goreng",
+    "nama": "🍚 Nasi Goreng",
     "harga": "Rp12.000",
     "kategori": "Makanan",
-    "deskripsi": "Nasi yang ditumis dan diberi bumbu sebagai penyedap rasa nya"
+    "deskripsi": "Nasi yang ditumis dengan bumbu pilihan."
   },
   {
-    "nama": "Ayam Geprek",
+    "nama": "🍗 Ayam Geprek",
     "harga": "Rp15.000",
     "kategori": "Makanan",
-    "deskripsi": "Ayam yang digeprek dengan sambal pedas"
-  },
-  {"nama": "🍜Mie Goreng",
-    "harga": "Rp6.000",
-    "kategori": "Makanan",
-    "deskripsi": "Mie yang dimasak dengan bumbu terbaik"
+    "deskripsi": "Ayam goreng yang digeprek dengan sambal pedas."
   },
   {
-    "nama": "🍖Sate Ayam",
+    "nama": "🍲 Bakso",
+    "harga": "Rp10.000",
+    "kategori": "Makanan",
+    "deskripsi": "Bakso hangat dengan kuah gurih."
+  },
+  {
+    "nama": "🍜 Mie Goreng",
+    "harga": "Rp10.000",
+    "kategori": "Makanan",
+    "deskripsi": "Mie goreng yang dimasak dengan bumbu pilihan."
+  },
+  {
+    "nama": "🍖 Sate Ayam",
+    "harga": "Rp13.000",
+    "kategori": "Makanan",
+    "deskripsi": "Daging ayam bakar dengan bumbu kacang."
+  },
+  {
+    "nama": "🥩 Sate Sapi",
+    "harga": "Rp15.000",
+    "kategori": "Makanan",
+    "deskripsi": "Daging sapi bakar dengan bumbu kacang."
+  },
+  {
+    "nama": "🍚 Nasi Uduk",
+    "harga": "Rp8.000",
+    "kategori": "Makanan",
+    "deskripsi": "Nasi gurih yang dimasak dengan santan."
+  },
+  {
+    "nama": "🍲 Soto Ayam",
     "harga": "Rp12.000",
     "kategori": "Makanan",
-    "deskripsi": "Daging ayam yang ditusuk dan dibakar dengan bumbu kacang"
+    "deskripsi": "Soto ayam hangat dengan kuah rempah."
   },
   {
-    "nama": "🥩Sate Sapi",
-    "harga": "Rp15.000",
+    "nama": "🍱 Nasi Ayam",
+    "harga": "Rp13.000",
     "kategori": "Makanan",
-    "deskripsi": "Daging sapi yang ditusuk dan dibakar dengan bumbu kacang"
+    "deskripsi": "Nasi putih dengan lauk ayam berbumbu."
   },
   {
-    "nama": "🥤Es Teh",
+    "nama": "🥟 Tempe Mendoan",
+    "harga": "Rp5.000",
+    "kategori": "Makanan",
+    "deskripsi": "Tempe berbalut tepung yang digoreng hangat."
+  },
+  {
+    "nama": "🐟 Pempek",
+    "harga": "Rp10.000",
+    "kategori": "Makanan",
+    "deskripsi": "Olahan ikan dengan kuah cuko."
+  },
+  {
+    "nama": "🥟 Siomay",
+    "harga": "Rp8.000",
+    "kategori": "Makanan",
+    "deskripsi": "Siomay kukus dengan saus kacang."
+  },
+  {
+    "nama": "🧋 Es Teh",
     "harga": "Rp4.000",
     "kategori": "Minuman",
-    "deskripsi": "Teh yang diolah dengan baik menghasilkan rasa segar dengan tambahan es batu"
+    "deskripsi": "Teh manis segar dengan es batu."
   },
   {
-    "nama": "🥤Es Jeruk",
+    "nama": "🍊 Es Jeruk",
     "harga": "Rp5.000",
     "kategori": "Minuman",
-    "deskripsi": "Jeruk yang diolah agar menjadi minuman segar dengan sedikit asam yang segar dan diberi es batu"
+    "deskripsi": "Minuman jeruk segar yang disajikan dingin."
   },
   {
-    "nama": "🍶Es Coklat",
+    "nama": "🍫 Es Cokelat",
     "harga": "Rp6.000",
     "kategori": "Minuman",
-    "deskripsi": "Olahan coklat yang diseduh lalu diberi es batu"
+    "deskripsi": "Minuman cokelat dingin."
   },
   {
-    "nama": "🥤Air Mineral",
+    "nama": "💧 Air Mineral",
     "harga": "Rp3.000",
     "kategori": "Minuman",
-    "deskripsi": "Air putih mineral yang menyegarkan"
+    "deskripsi": "Air mineral dalam kemasan."
   },
   {
-    "nama": "🥃Es Kopi Susu",
+    "nama": "🥃 Es Kopi Susu",
     "harga": "Rp5.000",
     "kategori": "Minuman",
-    "deskripsi": "Es kopi susu dengan rasa yang pas diminum"
+    "deskripsi": "Kopi susu dingin dengan rasa yang seimbang."
   },
   {
-    "nama": "☕Kopi",
+    "nama": "☕ Kopi",
     "harga": "Rp5.000",
     "kategori": "Minuman",
-    "deskripsi": "Kopi yang cocok diminum saat sedang beristirahat"
+    "deskripsi": "Kopi hangat untuk menemani waktu istirahat."
+  },
+  {
+    "nama": "🥑 Jus Alpukat",
+    "harga": "Rp8.000",
+    "kategori": "Minuman",
+    "deskripsi": "Jus alpukat lembut yang disajikan dingin."
+  },
+  {
+    "nama": "🥛 Susu Cokelat",
+    "harga": "Rp5.000",
+    "kategori": "Minuman",
+    "deskripsi": "Susu dengan rasa cokelat."
+  },
+  {
+    "nama": "🍋 Es Lemon Tea",
+    "harga": "Rp5.000",
+    "kategori": "Minuman",
+    "deskripsi": "Teh lemon segar dengan es batu."
+  },
+  {
+    "nama": "🍵 Teh Hangat",
+    "harga": "Rp3.000",
+    "kategori": "Minuman",
+    "deskripsi": "Teh manis hangat."
+  },
+  {
+    "nama": "🥥 Es Kelapa",
+    "harga": "Rp7.000",
+    "kategori": "Minuman",
+    "deskripsi": "Air kelapa muda segar yang disajikan dingin."
+  },
+  {
+    "nama": "🫚 Wedang Jahe",
+    "harga": "Rp4.000",
+    "kategori": "Minuman",
+    "deskripsi": "Minuman jahe hangat dengan rasa rempah."
   }
 ]

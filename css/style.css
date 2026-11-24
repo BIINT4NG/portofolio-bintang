@@ -9,6 +9,10 @@ img {
   height: auto;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 :root {
 --warna-utama: #1D3557;
 --warna-judul: #1D3557;
@@ -34,6 +38,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 h2 {
@@ -136,6 +141,10 @@ nav a:hover {
 /* Tantangan: menu ponsel buka-tutup dengan details */
 .menu-laptop {
   display: none;
+}
+
+.menu-ponsel {
+  margin-left: auto;
 }
 
 .menu-laptop a {
