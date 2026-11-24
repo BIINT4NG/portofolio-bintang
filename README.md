@@ -31,5 +31,5 @@ SEO 100
 - Kontak: Performance 99, Accessibility 100, Best Practices 100, SEO
 100
 ## Tautan
-- Website:  https://portofolio-bintang-coral.vercel.app/
+- Website: https://portofolio-bintang-coral.vercel.app/
 - Dibuat oleh: Bintang, SMKN 1 Pasuruan

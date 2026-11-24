@@ -8,8 +8,13 @@
   <title>Rahmat Bintang T.K | Beranda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap">
+  </noscript>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 
@@ -49,7 +54,7 @@
   <main>
     <div class="container">
       <section class="hero">
-        <img src="png/bintang.jpeg" alt="Foto profil Bintang" width="180" height="180">
+        <img src="png/bintang.webp" alt="Foto profil Bintang" width="180" height="180" fetchpriority="high">
         <div>
           <h2>Halo, saya Bintang!</h2>
           <p>Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG.</p>

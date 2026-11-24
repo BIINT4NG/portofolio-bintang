@@ -103,6 +103,8 @@ let proyek = daftarProyek
       judul: kartu.querySelector("h3").textContent,
       kategori: kartu.querySelector(".label").textContent,
       gambar: kartu.querySelector("img").getAttribute("src"),
+      width: kartu.querySelector("img").getAttribute("width"),
+      height: kartu.querySelector("img").getAttribute("height"),
       alt: kartu.querySelector("img").alt,
       deskripsi: kartu.querySelector("p").textContent,
     }))
@@ -110,11 +112,13 @@ let proyek = daftarProyek
 let kategoriAktif = "Semua";
 
 function buatKartu(item) {
+  const isFirstProject = item === proyek[0];
+
   return `
     <article class="kartu">
       <span class="label">${item.kategori}</span>
       <h3>${item.judul}</h3>
-      <img src="${item.gambar}" alt="${item.alt}" width="280" height="184"></img>
+      <img src="${item.gambar}" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="${isFirstProject ? "eager" : "lazy"}" decoding="async" ${isFirstProject ? 'fetchpriority="high"' : ""}>
       <p>${item.deskripsi}</p>
     </article>`;
 }

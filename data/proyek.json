@@ -2,42 +2,54 @@
   {
     "judul": "Halaman Profil Pertama",
     "kategori": "HTML",
-    "gambar": "png/tampilan.png",
+    "gambar": "png/tampilan.webp",
+    "width": 960,
+    "height": 487,
     "alt": "Tangkapan layar halaman profil Rahmat Bintang",
     "deskripsi": "Halaman web pertama saya, berisi profil, hobi, dan cita-cita."
   },
   {
     "judul": "Form Kontak",
     "kategori": "HTML",
-    "gambar": "img/proyek-kontak.png",
+    "gambar": "img/proyek-kontak.webp",
+    "width": 640,
+    "height": 420,
     "alt": "Tangkapan layar form kontak",
     "deskripsi": "Form kontak dengan label dan validasi isian wajib."
   },
   {
     "judul": "Tabel Jadwal Belajar",
     "kategori": "HTML",
-    "gambar": "img/proyek-jadwal.png",
+    "gambar": "img/proyek-jadwal.webp",
+    "width": 640,
+    "height": 420,
     "alt": "Tangkapan layar tabel jadwal belajar mandiri",
     "deskripsi": "Jadwal belajar mingguan yang disusun dengan thead dan tbody."
   },
   {
     "judul": "Portofolio Responsif",
     "kategori": "CSS",
-    "gambar": "img/css.png",
+    "gambar": "img/css.webp",
+    "width": 243,
+    "height": 582,
     "alt": "Tangkapan layar portofolio responsif",
     "deskripsi": "Tampilan portofolio yang menyesuaikan ponsel, tablet, dan laptop."
   },
   {
     "judul": "Kalkulator Nilai Rapor",
     "kategori": "JavaScript",
-    "gambar": "img/kalkulator-nilai.png",
+    "gambar": "img/kalkulator-nilai.webp",
+    "width": 555,
+    "height": 561,
     "alt": "Tangkapan layar hasil latihan kalkulator nilai",
     "deskripsi": "Menghitung rata-rata nilai dan menentukan predikat dengan JavaScript."
   },
   {
     "judul": "Lima Soal Logika",
     "kategori": "JavaScript",
-    "gambar": "img/soal-logika.png",
+    "gambar": "img/soal-logika.webp",
+    "width": 538,
+    "height": 495,
     "alt": "Tangkapan layar hasil pengujian lima soal logika",
     "deskripsi": "Lima fungsi logika yang masing-masing diuji dengan tiga masukan."
   }
