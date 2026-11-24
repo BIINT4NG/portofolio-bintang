@@ -99,26 +99,36 @@ const daftarProyek = document.querySelector("#daftar-proyek");
 const jumlahProyek = document.querySelector("#jumlah-proyek");
 const kotakCari = document.querySelector("#cari-proyek");
 let proyek = daftarProyek
-  ? Array.from(daftarProyek.querySelectorAll(".kartu")).map((kartu) => ({
-      judul: kartu.querySelector("h3").textContent,
-      kategori: kartu.querySelector(".label").textContent,
-      gambar: kartu.querySelector("img").getAttribute("src"),
-      width: kartu.querySelector("img").getAttribute("width"),
-      height: kartu.querySelector("img").getAttribute("height"),
-      alt: kartu.querySelector("img").alt,
-      deskripsi: kartu.querySelector("p").textContent,
-    }))
+  ? Array.from(daftarProyek.querySelectorAll(".kartu")).map((kartu) => {
+      const gambar = kartu.querySelector("img");
+      const gambarWebp = kartu.querySelector("picture source");
+
+      return {
+        judul: kartu.querySelector("h3").textContent,
+        kategori: kartu.querySelector(".label").textContent,
+        gambar: gambar.getAttribute("src"),
+        gambarWebp: gambarWebp ? gambarWebp.getAttribute("srcset") : "",
+        width: gambar.getAttribute("width"),
+        height: gambar.getAttribute("height"),
+        alt: gambar.alt,
+        deskripsi: kartu.querySelector("p").textContent,
+      };
+    })
   : [];
 let kategoriAktif = "Semua";
 
 function buatKartu(item) {
   const isFirstProject = item === proyek[0];
+  const imageAttributes = `src="${item.gambar}" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="${isFirstProject ? "eager" : "lazy"}" decoding="async" ${isFirstProject ? 'fetchpriority="high"' : ""}`;
+  const image = item.gambarWebp
+    ? `<picture><source srcset="${item.gambarWebp}" type="image/webp"><img ${imageAttributes}></picture>`
+    : `<img ${imageAttributes}>`;
 
   return `
     <article class="kartu">
       <span class="label">${item.kategori}</span>
       <h3>${item.judul}</h3>
-      <img src="${item.gambar}" alt="${item.alt}" width="${item.width}" height="${item.height}" loading="${isFirstProject ? "eager" : "lazy"}" decoding="async" ${isFirstProject ? 'fetchpriority="high"' : ""}>
+      ${image}
       <p>${item.deskripsi}</p>
     </article>`;
 }
@@ -251,5 +261,18 @@ async function ambilRepo() {
 }
 
 if (daftarRepo && statusRepo) {
-  ambilRepo();
+  const sectionRepo = daftarRepo.closest("section");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        observer.disconnect();
+        ambilRepo();
+      }
+    }, { rootMargin: "400px" });
+
+    observer.observe(sectionRepo);
+  } else {
+    ambilRepo();
+  }
 }

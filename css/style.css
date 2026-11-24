@@ -69,12 +69,12 @@ ol {
 }
 
 a {
-  color: #c4b5fd;
+  color: #5b21b6;
   transition: color 180ms ease;
 }
 
 a:hover {
-  color: #f0abfc;
+  color: #7e22ce;
 }
 
 /* 3. Wadah, header, dan menu */
@@ -297,6 +297,11 @@ main {
 .galeri-proyek .kartu {
   display: flex;
   flex-direction: column;
+}
+
+.galeri-proyek .kartu picture {
+  display: block;
+  width: 100%;
 }
 
 .daftar-kartu .kartu:hover {

@@ -2,9 +2,10 @@
   {
     "judul": "Halaman Profil Pertama",
     "kategori": "HTML",
-    "gambar": "png/tampilan.webp",
-    "width": 960,
-    "height": 487,
+    "gambar": "img/tampilan.png",
+    "gambarWebp": "img/tampilan.webp",
+    "width": 1339,
+    "height": 686,
     "alt": "Tangkapan layar halaman profil Rahmat Bintang",
     "deskripsi": "Halaman web pertama saya, berisi profil, hobi, dan cita-cita."
   },
