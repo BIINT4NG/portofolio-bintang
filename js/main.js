@@ -33,14 +33,17 @@ async function muatKeahlian() {
 
     renderSkills(skills);
   } catch (error) {
-    daftarSkill.innerHTML = "";
     jumlahSkill.textContent = "Maaf, daftar keahlian gagal dimuat.";
     console.error("Gagal memuat keahlian:", error);
   }
 }
 
 if (daftarSkill && jumlahSkill) {
-  muatKeahlian();
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(muatKeahlian, { timeout: 2000 });
+  } else {
+    window.addEventListener("load", muatKeahlian, { once: true });
+  }
 }
 
 const tombolSuka = document.querySelector("#tombol-suka");
@@ -65,9 +68,19 @@ if (kotakNama && sapaan) {
 const tombolTema = document.querySelector("#tombol-tema");
 
 if (tombolTema) {
+  const temaTersimpan = localStorage.getItem("tema");
+  if (temaTersimpan === "gelap") {
+    document.body.classList.add("gelap");
+    tombolTema.textContent = "Mode Terang";
+    tombolTema.setAttribute("aria-pressed", "true");
+  }
+
   tombolTema.addEventListener("click", () => {
     document.body.classList.toggle("gelap");
-    tombolTema.textContent = document.body.classList.contains("gelap")
+    const temaSekarang = document.body.classList.contains("gelap") ? "gelap" : "terang";
+    localStorage.setItem("tema", temaSekarang);
+    tombolTema.setAttribute("aria-pressed", temaSekarang === "gelap" ? "true" : "false");
+    tombolTema.textContent = temaSekarang === "gelap"
       ? "Mode Terang"
       : "Mode Gelap";
   });
@@ -194,8 +207,25 @@ async function muatProyek() {
       throw new Error("Format data proyek tidak valid");
     }
 
+    const dataSesuaiHtml = dataProyek.length === proyek.length &&
+      dataProyek.every((item, index) => {
+        const proyekHtml = proyek[index];
+        return item.judul === proyekHtml.judul &&
+          item.kategori === proyekHtml.kategori &&
+          item.gambar === proyekHtml.gambar &&
+          (item.gambarWebp || "") === proyekHtml.gambarWebp &&
+          String(item.width) === proyekHtml.width &&
+          String(item.height) === proyekHtml.height &&
+          item.alt === proyekHtml.alt &&
+          item.deskripsi === proyekHtml.deskripsi;
+      });
+
     proyek = dataProyek;
-    perbaruiProyek();
+    if (dataSesuaiHtml && kategoriAktif === "Semua" && (!kotakCari || !kotakCari.value.trim())) {
+      jumlahProyek.textContent = `Menampilkan ${proyek.length} dari ${proyek.length} proyek`;
+    } else {
+      perbaruiProyek();
+    }
   } catch (error) {
     perbaruiProyek();
     jumlahProyek.textContent = `Menampilkan ${proyek.length} proyek dari HTML; data JSON gagal dimuat.`;
@@ -209,6 +239,7 @@ if (daftarProyek && jumlahProyek) {
   pasangFilter("#filter-css", "CSS");
   pasangFilter("#filter-javascript", "JavaScript");
   if (kotakCari) kotakCari.addEventListener("input", perbaruiProyek);
+  jumlahProyek.textContent = `Menampilkan ${proyek.length} dari ${proyek.length} proyek`;
   muatProyek();
 }
 
@@ -218,10 +249,12 @@ const alamatRepo = `https://api.github.com/users/${username}/repos`;
 const pilihan = "?sort=updated&per_page=6";
 const daftarRepo = document.querySelector("#daftar-repo");
 const statusRepo = document.querySelector("#status-repo");
+const tombolRepo = document.querySelector("#muat-repo");
 
 async function ambilRepo() {
   if (!daftarRepo || !statusRepo) return;
 
+  if (tombolRepo) tombolRepo.disabled = true;
   statusRepo.textContent = "Memuat...";
 
   try {
@@ -257,22 +290,68 @@ async function ambilRepo() {
   } catch (error) {
     statusRepo.textContent = "maaf,daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
     console.error(error);
+  } finally {
+    if (tombolRepo) tombolRepo.disabled = false;
   }
 }
 
 if (daftarRepo && statusRepo) {
-  const sectionRepo = daftarRepo.closest("section");
+  if (tombolRepo) tombolRepo.addEventListener("click", ambilRepo);
+  ambilRepo();
+}
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries.some((entry) => entry.isIntersecting)) {
-        observer.disconnect();
-        ambilRepo();
-      }
-    }, { rootMargin: "400px" });
+// 6. Kalkulator nilai (halaman Kalkulator)
+function hitungRataRata(tugas, uts, uas) {
+  return (tugas + uts + uas) / 3;
+}
 
-    observer.observe(sectionRepo);
-  } else {
-    ambilRepo();
-  }
+function predikat(rataRata) {
+  if (rataRata >= 85) return "A";
+  if (rataRata >= 75) return "B";
+  if (rataRata >= 60) return "C";
+  if (rataRata >= 50) return "D";
+  return "E";
+}
+
+const inputTugas = document.querySelector("#tugas");
+const inputUts = document.querySelector("#uts");
+const inputUas = document.querySelector("#uas");
+const tombolHitung = document.querySelector("#hitung");
+const elemenHasil = document.querySelector("#hasil");
+const formKalkulator = document.querySelector("#form-kalkulator");
+
+if (inputTugas && inputUts && inputUas && tombolHitung && elemenHasil && formKalkulator) {
+  formKalkulator.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const nilaiTugas = Number(inputTugas.value);
+    const nilaiUts = Number(inputUts.value);
+    const nilaiUas = Number(inputUas.value);
+
+    if (!inputTugas.value || !inputUts.value || !inputUas.value) {
+      elemenHasil.textContent = "Lengkapi semua nilai terlebih dahulu.";
+      return;
+    }
+
+    if ([nilaiTugas, nilaiUts, nilaiUas].some((nilai) => nilai < 0 || nilai > 100)) {
+      elemenHasil.textContent = "Nilai harus berada pada rentang 0 sampai 100.";
+      return;
+    }
+
+    const rataRata = hitungRataRata(nilaiTugas, nilaiUts, nilaiUas);
+    elemenHasil.textContent = `Rata-rata ${rataRata.toFixed(1)}, predikat ${predikat(rataRata)}`;
+  });
+}
+
+// 7. Tombol kembali ke atas (semua halaman)
+const tombolKeAtas = document.querySelector("#tombol-ke-atas");
+
+if (tombolKeAtas) {
+  tombolKeAtas.addEventListener("click", () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }

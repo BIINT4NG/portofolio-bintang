@@ -1,10 +1,3 @@
-// =======================================
-// KASIR KANTIN SMKN 1 Pasuruan
-// =======================================
-
-console.log("🍽️ KASIR KANTIN SMKN 1 Pasuruan");
-
-
 // 1. HARGA MAKANAN DAN MINUMAN
 
 const hargaNasi = 12000;

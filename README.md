@@ -11,10 +11,11 @@ dan laptop, serta interaktif dengan JavaScript.
 belajar, dan daftar keahlian dari `data/keahlian.json` yang bisa
 ditambah
 - Halaman **Proyek** berisi enam kartu proyek dari
-`data/proyek.json` dengan filter kategori, serta repositori GitHub
-terbaru dari GitHub API
+`data/proyek.json` dengan filter kategori dan pencarian, serta repositori
+GitHub terbaru yang dimuat otomatis dari GitHub API
 - Halaman **Kontak** berisi form dengan penghitung karakter pesan
 - Mode gelap di semua halaman
+- Tombol **Kembali ke atas** tersedia di footer semua halaman
 - Tampilan responsif dengan Flexbox dan *media query*
 
 ## Teknologi
@@ -32,4 +33,5 @@ SEO 100
 100
 ## Tautan
 - Website: https://portofolio-bintang-coral.vercel.app/
+- GitHub: https://github.com/BIINT4NG/portofolio-bintang
 - Dibuat oleh: Bintang, SMKN 1 Pasuruan

@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hitung rata-rata nilai tugas, UTS, dan UAS dengan Kalkulator Nilai Rahmat Bintang.">
+    <meta name="theme-color" content="#4c1d95">
+    <link rel="canonical" href="https://portofolio-bintang-coral.vercel.app/kalkulator.html">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%234c1d95'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='38' font-family='Arial' fill='white'%3EB%3C/text%3E%3C/svg%3E">
 
     <title>Kalkulator Nilai - Rahmat Bintang T.K</title>
 
     <!-- Hubungkan CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!-- Hubungkan JavaScript -->
-    <script src="js/main.js" defer></script>
-    <script src="js/kalkulator.js" defer></script>
+    <script src="js/site.min.js" defer></script>
 </head>
 
 <body>
+    <a class="lewati-navigasi" href="#konten-utama">Lewati ke konten utama</a>
 
     <!-- Navbar -->
     <header>
@@ -37,13 +41,14 @@
             <button
                 type="button"
                 id="tombol-tema"
-                class="tombol-tema">
+                class="tombol-tema"
+                aria-pressed="false">
                 Mode Gelap
             </button>
 
             <!-- Menu Ponsel -->
             <details class="menu-ponsel">
-                <summary>Menu</summary>
+                <summary aria-label="Buka menu navigasi">Menu</summary>
 
                 <nav>
                     <ul>
@@ -60,7 +65,7 @@
     </header>
 
     <!-- Konten Utama -->
-    <main>
+    <main id="konten-utama">
 
         <div class="container">
           <section class="kartu kalkulator">
@@ -73,7 +78,7 @@
             </p>
 
             <!-- Form Input Nilai -->
-            <div class="form-kalkulator">
+            <form class="form-kalkulator" id="form-kalkulator">
 
                 <div class="input-group">
                     <label for="tugas">Nilai Tugas</label>
@@ -82,6 +87,7 @@
                         id="tugas"
                         min="0"
                         max="100"
+                        required
                         placeholder="Nilai Tugas">
                 </div>
 
@@ -92,6 +98,7 @@
                         id="uts"
                         min="0"
                         max="100"
+                        required
                         placeholder="Nilai UTS">
                 </div>
 
@@ -102,15 +109,15 @@
                         id="uas"
                         min="0"
                         max="100"
+                        required
                         placeholder="Nilai UAS">
                 </div>
 
-            </div>
-
-            <!-- Tombol Hitung -->
-            <button id="hitung" type="button">
-                Hitung
-            </button>
+              <!-- Tombol Hitung -->
+              <button id="hitung" type="submit">
+                  Hitung
+              </button>
+            </form>
 
             <p id="hasil" role="status" aria-live="polite">
                 Hasil akan muncul di sini.
@@ -134,6 +141,7 @@
             &copy; 2026 Rahmat Bintang T.K.
             Dibuat di Kelas Industri UBIG.
         </p>
+        <button type="button" id="tombol-ke-atas" class="tombol-ke-atas">Kembali ke atas</button>
 
     </footer>
 

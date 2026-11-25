@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kasir Kantin SMKN 1 Pasuruan untuk mencari menu makanan, minuman, dan melihat contoh transaksi pembayaran.">
+  <link rel="canonical" href="https://portofolio-bintang-coral.vercel.app/kasir-kantin/KasirKantinSMKN1Pasuruan.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231d3557'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='38' font-family='Arial' fill='white'%3EK%3C/text%3E%3C/svg%3E">
   <title>Rahmat Bintang T.K | Kasir Kantin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"></noscript>
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/main.js" defer></script>
   <script src="kantin.js" defer></script>
@@ -25,7 +24,7 @@
           <li><a href="KasirKantinSMKN1Pasuruan.html" aria-current="page">Kasir Kantin</a></li>
         </ul>
       </nav>
-      <button type="button" id="tombol-tema" class="tombol-tema">Mode Gelap</button>
+      <button type="button" id="tombol-tema" class="tombol-tema" aria-pressed="false">Mode Gelap</button>
       <details class="menu-ponsel">
         <summary aria-label="Buka menu navigasi">Menu</summary>
         <nav>
@@ -47,7 +46,7 @@
         <h2>Kasir Kantin</h2>
         <p>Selamat datang di Kasir Kantin SMKN 1 Pasuruan. Silakan pilih makanan dan minuman.</p>
         <label for="cari-menu">Cari menu</label>
-        <input type="search" id="cari-menu" placeholder="Masukkan nama menu atau kategori">
+        <input type="search" id="cari-menu" placeholder="Masukkan nama menu atau kategori" autocomplete="off">
         <p id="jumlah-menu" aria-live="polite">Menampilkan 24 dari 24 menu</p>
       </section>
 
@@ -195,6 +194,7 @@
       <a href="https://github.com/BIINT4NG/portofolio-bintang" target="_blank" rel="noreferrer">GitHub</a> |
       <a href="https://www.youtube.com/@Rhmat%C3%9Fintang" target="_blank" rel="noreferrer">YouTube</a></p>
     <p>&copy; 2026 Rahmat Bintang T.K Dibuat di Kelas Industri UBIG.</p>
+    <button type="button" id="tombol-ke-atas" class="tombol-ke-atas">Kembali ke atas</button>
   </footer>
 </body>
 </html>

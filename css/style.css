@@ -41,6 +41,32 @@ body {
   min-height: 100dvh;
 }
 
+.lewati-navigasi {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0 8px 8px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.lewati-navigasi:focus {
+  top: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
 h2 {
   background: linear-gradient(90deg, #6d28d9, #9333ea 55%, #db2777);
   -webkit-background-clip: text;
@@ -134,8 +160,13 @@ nav a {
 
 nav a:hover {
   background: rgba(139, 92, 246, 0.08);
-  color: #111827;
+  color: #ffffff;
   transform: translateY(-1px);
+}
+
+nav a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 /* Tantangan: menu ponsel buka-tutup dengan details */
@@ -673,4 +704,39 @@ body.gelap .label {
 
 .keterangan {
   font-size: 0.875rem;
+}
+
+#daftar-repo {
+  min-height: 12rem;
+  padding-left: 1.25rem;
+}
+
+/* Optimasi khusus halaman Proyek untuk Lighthouse */
+.halaman-proyek header,
+.halaman-proyek footer {
+  background: #4c1d95;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.halaman-proyek .kartu,
+.halaman-proyek .hero {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.halaman-proyek * {
+  transition: none !important;
+  animation: none !important;
+}
+
+.halaman-proyek .daftar-kartu .kartu:hover {
+  transform: none;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}
+
+.halaman-proyek .galeri-proyek .kartu img {
+  content-visibility: auto;
+  contain-intrinsic-size: 420px 220px;
 }
